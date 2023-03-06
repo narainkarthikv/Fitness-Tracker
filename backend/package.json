@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon indesx.js",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
