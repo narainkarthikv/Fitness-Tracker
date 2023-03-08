@@ -15,10 +15,10 @@ function App() {
       <div className='container'>
         <Navbar />
         <br />
-          <Route exact path='https://capable-pasca-47f9c1.netlify.app/' component={ExercisesList} />
-          <Route path='https://capable-pasca-47f9c1.netlify.app/edit/:id' component={EditExercise} />
-          <Route path='https://capable-pasca-47f9c1.netlify.app/create' component={CreateExercise} />
-          <Route path='https://capable-pasca-47f9c1.netlify.app/user' component={CreateUser} />
+          <Route exact path='/' component={ExercisesList} />
+          <Route path='/edit/:id' component={EditExercise} />
+          <Route path='/create' component={CreateExercise} />
+          <Route path='/user' component={CreateUser} />
       </div>
     </Router>
   );
