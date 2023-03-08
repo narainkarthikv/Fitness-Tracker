@@ -15,10 +15,10 @@ function App() {
       <div className='container'>
         <Navbar />
         <br />
-          <Route exact path='/' component={ExercisesList} />
-          <Route path='/edit/:id' component={EditExercise} />
-          <Route path='/create' component={CreateExercise} />
-          <Route path='/user' component={CreateUser} />
+          <Route exact path='https://tiny-seahorse-4a2b7e.netlify.app/' component={ExercisesList} />
+          <Route path='https://tiny-seahorse-4a2b7e.netlify.app/edit/:id' component={EditExercise} />
+          <Route path='https://tiny-seahorse-4a2b7e.netlify.app/create' component={CreateExercise} />
+          <Route path='https://tiny-seahorse-4a2b7e.netlify.app/user' component={CreateUser} />
       </div>
     </Router>
   );
