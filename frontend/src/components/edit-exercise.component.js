@@ -35,7 +35,7 @@ export default class EditExercise extends Component {
             console.log(error);
         })
     })  
-    axios.get('/users/')
+    axios.get('/users')
         .then(response=>{
             if(response.data.length>0){
                 this.setState({
@@ -81,7 +81,7 @@ export default class EditExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('/exercises/update/'+this.props.match.params.id, exercise)
+    axios.post('https://fitness-vq64.onrender.com/exercises/update/'+this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
     
     window.location = '/';

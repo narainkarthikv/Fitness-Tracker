@@ -23,7 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-      axios.get('/users')
+      axios.get('https://fitness-vq64.onrender.com/users')
         .then(response=>{
             if(response.data.length>0){
                 this.setState({
@@ -69,7 +69,7 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('/exercises/add', exercise)
+    axios.post('https://fitness-vq64.onrender.com/exercises/add', exercise)
       .then(res => console.log(res.data))
     
     window.location = '/';

@@ -9,7 +9,7 @@ const Exercise = ({ exercise, deleteExercise }) => (
     <td>{exercise.duration}</td>
     <td>{new Date(exercise.date).toDateString()}</td>
     <td>
-      <Link to={`/edit/${exercise._id}`}>edit</Link> |{' '}
+      <Link to={`https://fitness-vq64.onrender.com/edit/${exercise._id}`}>edit</Link> |{' '}
       <a href="exercise-list.component.js" onClick={() => deleteExercise(exercise._id)}>
         delete
       </a>
@@ -22,7 +22,7 @@ const ExercisesList = () => {
 
   useEffect(() => {
     axios
-      .get('/exercises/')
+      .get('https://fitness-vq64.onrender.com/exercises/')
       .then(response => {
         setExercises(response.data);
       })
@@ -32,7 +32,7 @@ const ExercisesList = () => {
   }, []);
 
   const deleteExercise = id => {
-    axios.delete(`/exercises/${id}`).then(res => {
+    axios.delete(`https://fitness-vq64.onrender.com/exercises/${id}`).then(res => {
       console.log(res.data);
       setExercises(prevExercises => prevExercises.filter(ex => ex._id !== id));
     });
